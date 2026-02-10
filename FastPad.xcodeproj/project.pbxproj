@@ -1,0 +1,62 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXProject section */
+		1 = {
+			isa = PBXProject;
+			buildConfigurationList = 2;
+			compatibilityVersion = "Xcode 14.0";
+			mainGroup = 3;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (4);
+		};
+/* End PBXProject section */
+
+/* Begin PBXNativeTarget section */
+		4 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5;
+			name = FastPad;
+			productName = FastPad;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin XCConfigurationList section */
+		2 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (6);
+		};
+		5 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (7);
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCBuildConfiguration section */
+		6 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = FastPad;
+			};
+			name = Release;
+		};
+		7 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = FastPad;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+	};
+	rootObject = 1;
+}
