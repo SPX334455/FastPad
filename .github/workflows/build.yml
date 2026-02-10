@@ -1,0 +1,33 @@
+name: Build FastPad IPA
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-14
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Archive
+        run: |
+          xcodebuild archive \
+            -project FastPad.xcodeproj \
+            -scheme FastPad \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/FastPad.xcarchive \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Export IPA
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath build/FastPad.xcarchive \
+            -exportPath build/ipa \
+            -exportOptionsPlist exportOptions.plist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FastPad-IPA
+          path: build/ipa/*.ipa
